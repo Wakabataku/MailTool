@@ -1,19 +1,25 @@
 $(function(){
 
     //タブを指定
-    $("#tabs").tabs();
+    $('#tabs').tabs({
+        selected: 0,
+    });
 
     //クリックされたときにテキストエリアに入力
-    $('#often').children().on('click', function(){
+    $('.tag').children().on('click', function(){
         let word = $(this).text();
-        console.log(word);
         $('textarea').append(word+'\n');
     });
+
+
     //語句をドラッグ可能にする
-    $('#often').children().draggable({helper: "clone"});
+    $('.tag').children().draggable({helper: "clone"});
+
+    //語句にカーソルが重なったとき縦線でなくす
+    $('.tag').children().css("cursor", "pointer");
 
     //語句がドロップされたときの処理
-    $("#main").find('textarea').droppable({
+    $('#mainForm').find('textarea').droppable({
         drop: function(event, ui){
             //ドラッグされた要素情報取得
             let selectedWord = ui.draggable.text();;
@@ -22,11 +28,4 @@ $(function(){
         }
     })
 
-    // //語句がドロップされたときの処理
-    // $(".main").droppable({
-    //     //dropイベント
-    //     drop: function(event, ui){
-    //         let selectedSrc = ui.draggable.attr("href");
-    //     }
-    // });
 });
