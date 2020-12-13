@@ -24,7 +24,7 @@ $(function(){
     //ワードをテキストエリアにドロップしたときワード入力
     $('#mainForm').find('textarea').droppable({
         drop: function(event, ui){
-            let seletedWord = ui.draggable.text();
+            let selectedWord = ui.draggable.text();
             $('textarea').append(selectedWord + '\n');
         }
     });
