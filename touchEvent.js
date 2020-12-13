@@ -32,11 +32,15 @@ function touchMoveEvent(event){
 
 function touchEndEvent(event){
     event.preventDefault();
-    let touch = event.position();
+    
     event.target.style.position = "";
     event.target.style.top = eventPos.y;
     event.target.style.left = eventPos.x;
 
+    let eventPos = {
+        x: event.changedTouches[0].pageX,
+        y: event.changedTouches[0].pageY
+    };
     
     //ドラッグされた要素情報取得
     let selectedWord = event.target.text();;
