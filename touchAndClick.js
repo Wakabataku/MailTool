@@ -22,12 +22,13 @@ $(function(){
     });
 
     //ワードをテキストエリアにドロップしたときワード入力
-    $('#mainForm').find('textarea').droppable({
+    $('#inputForm').droppable({
         drop: function(event, ui){
             let selectedWord = ui.draggable.text();
             let box = $('#inputForm');
 
             box.val(box.val() + selectedWord + '\n');
+            //下の形では、ユーザが入力した後appendできなくなる
             // $('textarea').append(selectedWord + '\n');
         }
     });
