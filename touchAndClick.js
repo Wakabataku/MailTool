@@ -9,7 +9,7 @@ $(function(){
     //クリックされたときにテキストエリアに入力
     $('.tag').children().on('click', function(){
         let word = $(this).text();
-        $('textarea').append(word+'\n');
+        $('#inputForm').append(word+'\n');
     });
 
 
@@ -25,7 +25,10 @@ $(function(){
     $('#mainForm').find('textarea').droppable({
         drop: function(event, ui){
             let selectedWord = ui.draggable.text();
-            $('textarea').append(selectedWord + '\n');
+            let box = $('#inputForm');
+
+            box.val(box.val() + selectedWord + '\n');
+            // $('textarea').append(selectedWord + '\n');
         }
     });
 
