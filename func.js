@@ -1,14 +1,16 @@
 $(function(){
+    
+    // let buttonFunc = function() {};
+
     //クリアボタンが押されたとき
     $('#clear').on('click', function(){
-        $('#inputForm').val().remove();
-        // $('textarea').text("");
+        $('textarea[name="inputForm"]').val("");
     });
 
     //コピーボタンが押されたとき
     $('#copy').on('click', function(){
         //コピーする文章の取得
-        let text = $('textarea').text();
+        let text = $('textarea[name="inputForm"]').val();
         //テキストエリアの作成
         let $textArea = $('<textarea></textarea>');
         //テキストエリアに文章挿入
