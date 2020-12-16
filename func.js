@@ -1,7 +1,8 @@
 $(function(){
     //クリアボタンが押されたとき
     $('#clear').on('click', function(){
-        $('textarea').text("");
+        $('#inputForm').val().remove();
+        // $('textarea').text("");
     });
 
     //コピーボタンが押されたとき

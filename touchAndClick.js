@@ -8,13 +8,14 @@ $(function(){
 
     //クリックされたときにテキストエリアに入力
     // $('.tag').children().on('click', function(){
-    //     let word = $(this).text();
+    //     let selectedWord = $(this).text();
+
     //     $('#inputForm').append(word+'\n');
     // });
 
 
     //語句にカーソルが重なったとき縦線でなくす
-    // $('.tag').children().css("cursor", "pointer");
+    $('.tag').children().css("cursor", "pointer");
 
     //ワードをドラッグ・タップ移動可能にする
     $('.tag').children().draggable({
