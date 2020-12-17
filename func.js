@@ -1,11 +1,18 @@
 $(function(){
-    
-    // let buttonFunc = function() {};
+    function clearButton(clearArea){
+        $(`textarea[name=${clearArea}]`).val("");
+        console.log('クリアー');
+    }
+
+
 
     //クリアボタンが押されたとき
     $('#clear').on('click', function(){
-        $('textarea[name="inputForm"]').val("");
+        clearButton("inputForm");
     });
+    // $('#clear').on('click', function(){
+    //     $('textarea[name="inputForm"]').val("");
+    // });
 
     //コピーボタンが押されたとき
     $('#copy').on('click', function(){
