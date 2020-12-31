@@ -1,15 +1,15 @@
-function buttonEvent(){};
+function ButtonEvent() { };
 
-buttonEvent.prototype = {
-    constructor: buttonEvent,
+ButtonEvent.prototype = {
+    constructor: ButtonEvent,
 
     //クリアボタンが押されたとき
-    clearButton: function(clearArea, buttonName){
+    clearButton: function (clearArea, buttonName) {
         $(`${clearArea}[name=${buttonName}]`).val("");
     },
 
     //コピーボタンが押されたとき
-    copyButton: function(copyArea, buttonName){
+    copyButton: function (copyArea, buttonName) {
         //コピーする文章取得
         let textName = $(`${copyArea}[name=${buttonName}]`);
         let text = textName.val();
