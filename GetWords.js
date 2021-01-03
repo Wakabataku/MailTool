@@ -51,7 +51,7 @@ GetWords.prototype = {
         //div要素の記述
         let insert = '<div id=' + this.tagID + ' class="tag">\n';
         for (let i = 0, len = result.length; i < len; ++i) {
-            insert += '<a class="item" tyle="cursor: pointer;">'
+            insert += '<a class="item" style="cursor: pointer;">'
                 + result[i][1] + '</a>\n';
             // insert += '<a style="cursor: pointer;">'
             //     + result[i][1] + '</a>\n';

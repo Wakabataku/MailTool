@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@import "modern_css_reset";
+
+body {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+textarea {
+    resize: none;
+    width: 600px;
+    height: 200px;
+}
+
+.tabs {
+    margin-right: auto;
+    margin-left: auto;
+    width: 600px;
+    background-color: white;
+}
+
+.tag {
+    a {
+        // color: #010079;
+        // text-shadow: 0 0 5px white;
+        // border-left: solid 3px #010079;
+        // background: -webkit-repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+        // background: repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+        display: inline-block;
+        padding: 0.25em 0.5em;
+        text-decoration: none;
+        color: #FFF;
+        background: #fd9535;
+        border-radius: 4px;
+        box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+        font-weight: bold;
+        border: solid 2px #d27d00;
+    }
+
+}
